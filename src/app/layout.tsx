@@ -10,9 +10,9 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'CIRCLE TEC',
+  title: 'Clothify',
   icons: {
-    icon: '/footer.png', // Path inside public folder
+    icon: '', // Path inside public folder
   },
 };
 

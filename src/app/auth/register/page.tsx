@@ -30,12 +30,10 @@ export default function Register() {
         body: JSON.stringify(form),
       });
 
-      // Safe JSON parsing
       let data: { message?: string } = {};
       try {
         data = await res.json();
-      } catch (error) {
-        console.error("Failed to parse JSON:", error);
+      } catch {
         data = {};
       }
 
@@ -55,8 +53,7 @@ export default function Register() {
           confirmButtonColor: "#d33",
         });
       }
-    } catch (error) {
-      console.error("Registration error:", error);
+    } catch {
       await Swal.fire({
         icon: "error",
         title: "Registration Failed",
@@ -69,25 +66,32 @@ export default function Register() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen px-4">
-      <Card className="w-full max-w-md shadow-lg">
-        <CardHeader>
-          <CardTitle className="text-2xl text-center">Create Account</CardTitle>
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-blue-50 to-purple-50 px-4">
+      <Card className="w-full max-w-md shadow-xl rounded-2xl border border-gray-100">
+        <CardHeader className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-t-2xl">
+          <CardTitle className="text-2xl text-white text-center font-bold py-5">
+            Create Account
+          </CardTitle>
         </CardHeader>
-        <CardContent>
-          <form className="space-y-4" onSubmit={handleSubmit}>
+        <CardContent className="p-8">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
-              <Label htmlFor="name">Name</Label>
+              <Label htmlFor="name" className="mb-2 font-medium text-gray-700">
+                Name
+              </Label>
               <Input
                 id="name"
                 placeholder="Your Name"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 required
+                className="border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-lg px-4 py-3 w-full"
               />
             </div>
             <div>
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email" className="mb-2 font-medium text-gray-700">
+                Email
+              </Label>
               <Input
                 type="email"
                 id="email"
@@ -95,10 +99,13 @@ export default function Register() {
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
+                className="border border-gray-300 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 rounded-lg px-4 py-3 w-full"
               />
             </div>
             <div>
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password" className="mb-2 font-medium text-gray-700">
+                Password
+              </Label>
               <Input
                 type="password"
                 id="password"
@@ -106,12 +113,13 @@ export default function Register() {
                 value={form.password}
                 onChange={(e) => setForm({ ...form, password: e.target.value })}
                 required
+                className="border border-gray-300 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 rounded-lg px-4 py-3 w-full"
               />
             </div>
             <Button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center"
+              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 rounded-xl shadow-md transition-transform duration-200 active:scale-95 flex items-center justify-center"
             >
               {loading ? (
                 <svg
@@ -139,9 +147,10 @@ export default function Register() {
               )}
             </Button>
           </form>
-          <p className="text-sm text-center mt-4">
+
+          <p className="text-sm text-center mt-6 text-gray-600">
             Already have an account?{" "}
-            <a href="/auth/login" className="text-blue-500 hover:underline">
+            <a href="/auth/login" className="text-blue-600 hover:underline font-medium">
               Login
             </a>
           </p>

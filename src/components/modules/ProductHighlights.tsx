@@ -81,9 +81,9 @@ const ProductHighlights = () => {
                     <p className="text-xl font-bold text-lime-600">${product.price}</p>
                     <button
                       onClick={() => router.push(`/products/${product.id}`)}
-                      className="bg-lime-500 hover:bg-lime-600 text-white px-1 py-2 my-2 rounded-xl flex items-center gap-2 transition duration-300"
+                      className="bg-lime-500 hover:bg-lime-600 text-white px-4 py-4 my-2 rounded-xl flex items-center gap-2 transition duration-300"
                     >
-                      <ShoppingCart size={18} /> Buy Now
+                Details
                     </button>
                   </div>
                 </div>
