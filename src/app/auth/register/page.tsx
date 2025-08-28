@@ -68,7 +68,7 @@ export default function Register() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-blue-50 to-purple-50 px-4">
       <Card className="w-full max-w-md shadow-xl rounded-2xl border border-gray-100">
-        <CardHeader className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-t-2xl">
+        <CardHeader className="bg-lime-500 rounded-t-2xl">
           <CardTitle className="text-2xl text-white text-center font-bold py-5">
             Create Account
           </CardTitle>
@@ -119,7 +119,7 @@ export default function Register() {
             <Button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 rounded-xl shadow-md transition-transform duration-200 active:scale-95 flex items-center justify-center"
+              className="w-full bg-lime-500 hover:bg-lime-700 text-white font-semibold py-3 rounded-xl shadow-md transition-transform duration-200 active:scale-95 flex items-center justify-center"
             >
               {loading ? (
                 <svg
@@ -150,7 +150,7 @@ export default function Register() {
 
           <p className="text-sm text-center mt-6 text-gray-600">
             Already have an account?{" "}
-            <a href="/auth/login" className="text-blue-600 hover:underline font-medium">
+            <a href="/auth/login" className="text-lime-500 hover:underline font-medium">
               Login
             </a>
           </p>

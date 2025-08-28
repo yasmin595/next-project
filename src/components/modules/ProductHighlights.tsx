@@ -34,7 +34,7 @@ const ProductHighlights = () => {
   const router = useRouter();
 
   const { data: products, isLoading } = useSWR<Product[]>(
-    "http://localhost:3000/api/items", // API route to fetch products from MongoDB
+    "https://next-js-project-bice-chi.vercel.app/api/items", // API route to fetch products from MongoDB
     fetcher,
     { revalidateOnFocus: false }
   );
@@ -77,7 +77,7 @@ const ProductHighlights = () => {
                       {product.description || "Premium quality clothing for your wardrobe."}
                     </p>
                   </div>
-                  <div className="flex flex-col items-center justify-between mt-4">
+                  <div className="flex  items-center justify-between mt-4">
                     <p className="text-xl font-bold text-lime-600">${product.price}</p>
                     <button
                       onClick={() => router.push(`/products/${product.id}`)}

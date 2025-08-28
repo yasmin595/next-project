@@ -54,7 +54,7 @@ export default function Login() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-blue-50 to-purple-50 px-4">
       <Card className="w-full max-w-md shadow-xl rounded-2xl border border-gray-100">
-        <CardHeader className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-t-2xl">
+        <CardHeader className="bg-lime-500 rounded-t-2xl">
           <CardTitle className="text-2xl text-white text-center font-bold py-5">
             Login
           </CardTitle>
@@ -86,13 +86,13 @@ export default function Login() {
                 value={form.password}
                 onChange={(e) => setForm({ ...form, password: e.target.value })}
                 required
-                className="border border-gray-300 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 rounded-lg px-4 py-3 w-full"
+                className="border border-gray-300  focus:ring-1 focus:ring-lime-500 rounded-lg px-4 py-3 w-full"
               />
             </div>
             <Button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 rounded-xl shadow-md transition-transform duration-200 active:scale-95 flex items-center justify-center"
+              className="w-full bg-lime-500  text-white font-semibold py-3 rounded-xl shadow-md transition-transform duration-200 active:scale-95 flex items-center justify-center"
             >
               {loading ? (
                 <svg
@@ -168,7 +168,7 @@ export default function Login() {
 
           <p className="text-sm text-center mt-6 text-gray-600">
             Don’t have an account?{" "}
-            <a href="/auth/register" className="text-blue-600 hover:underline font-medium">
+            <a href="/auth/register" className="text-lime-500 hover:underline font-medium">
               Register
             </a>
           </p>

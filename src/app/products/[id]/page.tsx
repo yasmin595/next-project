@@ -43,7 +43,7 @@ const ProductDetailsPage = () => {
 
   // SWR data fetching
   const { data: product, isLoading, error } = useSWR<Product>(
-    id ? `http://localhost:3000/api/items/${id}` : null,
+    id ? `https://next-js-project-bice-chi.vercel.app/api/items/${id}` : null,
     fetcher,
     { revalidateOnFocus: false }
   );

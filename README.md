@@ -1,70 +1,62 @@
-# 🛒 Circle-Tec Online Store  
+# Colthify 👕✨
 
+Colthify is a modern **Next.js** project, built with performance, scalability, and clean UI in mind.  
+This project is deployed seamlessly using **Vercel** for smooth CI/CD integration.
 
-**Circle-Tec** is a modern e-commerce web application built with **Next.js**, **NextAuth**, and **MongoDB**.  
-It provides users with secure authentication, product browsing, and a smooth shopping experience.
+---
+🔗 Live Links
+🌐 Live Site:https://next-js-project-bice-chi.vercel.app
+
+## 🚀 Tech Stack
+- **Framework:** [Next.js](https://nextjs.org/)  
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)  
+- **Deployment:** [Vercel](https://vercel.com/)  
 
 ---
 
-## 🔗 Live Links
+## 📦 Installation & Setup
 
-🌐 **Live Site:** [http://localhost:3000/](http://localhost:3000/)
+Clone the repository and install dependencies:
 
----
-
-## 🚀 Features  
-- 🔑 Authentication with **NextAuth** (Google & Credentials login)  
-- 📦 Product listing and browsing  
-- 🗄️ MongoDB database integration  
-- 🎨 Responsive design with Tailwind CSS  
-- ☁️ Deployment ready with **Vercel**  
-
----
-
-
-## 🚀 Tech Stack  
-
-- **Frontend:** Next.js, React, TypeScript, Tailwind CSS, Shadcn UI  
-- **Backend:** Next.js API Routes  
-- **Database:** MongoDB (Atlas)  
-- **Authentication:** NextAuth.js (Google & Credentials)  
-- **Deployment:** Vercel   
-
-## 🛠️ Setup & Installation  
-
-### 1. Clone the repository  
 ```bash
-git clone https://github.com/TarekNexus/circle-tec
-cd circle-tec
+git clone 
+cd colthify
+npm install   # or yarn install / pnpm install
+Run the development server:
 
-### 2. Install dependencies
- npm install
+bash
+Copy code
+npm run dev
+Now open http://localhost:3000 in your browser.
 
- ### 3. Configure environment variables
- - Create a .env.local file in the project root:
- MONGODB_URI=your_mongodb_connection_string
-DB_NAME=storeDB
+🏗️ Build for Production
+bash
+Copy code
+npm run build
+npm start
+🌐 Deployment
+This project is deployed using Vercel.
 
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
+Push your code to GitHub.
 
-NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=your_random_secret
+Go to Vercel, create a new project.
 
+Import your Colthify repository.
 
-### 3. Run the development server
-- npm run dev
+Vercel will automatically detect Next.js settings:
 
+Build Command: next build
 
-## 📌 Route Summary  
+Install Command: npm install
 
-| Route             | Description                          |
-|-------------------|--------------------------------------|
-| `/`               | Homepage with featured products      |
-| `/products`       | All products listing                 |
-| `/products/[id]`  | Product details page                 |
-| `/auth/login`     | Login page                           |
-| `/auth/register`  | Register new account                 |
-| `/api/auth/*`     | NextAuth authentication routes       |
-| `/dashboard`      | User dashboard (protected)           |
+Output Directory: .next
+
+Click Deploy 🎉
+
+📌 Features
+⚡ Fast & optimized with Next.js
+
+🎨 Beautiful UI with Tailwind CSS
+
+☁️ Easy deployment on Vercel
 

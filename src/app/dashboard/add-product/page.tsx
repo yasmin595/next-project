@@ -26,10 +26,11 @@ const AddProductPage = () => {
 
   // Redirect if not authenticated
   useEffect(() => {
-    if (status === "unauthenticated") {
+    if (status === "loading") return; // wait until session is loaded
+    if (!session) {
       router.push("/auth/login");
     }
-  }, [status, router]);
+  }, [status, session, router]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setProduct({ ...product, [e.target.name]: e.target.value });
@@ -69,7 +70,7 @@ const AddProductPage = () => {
   };
 
   if (status === "loading") return <p className="text-center mt-10">Loading...</p>;
-  if (status !== "authenticated") return null;
+  if (!session) return null; // prevents flicker before redirect
 
   return (
     <div className="max-w-2xl mx-auto py-16 px-4">

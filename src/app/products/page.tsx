@@ -33,7 +33,7 @@ const SkeletonCard = () => (
 const ProductListPage = () => {
   const router = useRouter();
   const { data: products, isLoading } = useSWR<Product[]>(
-    "http://localhost:3000/api/items",
+    "https://next-js-project-bice-chi.vercel.app/api/items",
     fetcher,
     { revalidateOnFocus: false }
   );
@@ -41,7 +41,7 @@ const ProductListPage = () => {
   return (
     <section className="py-16 w-11/12 mx-auto min-h-screen bg-gray-50 dark:bg-gray-900">
       <div className="w-11/12 mx-auto text-center mb-12">
-        <h1 className="text-4xl font-extrabold mb-4 text-gray-900 dark:text-white">
+        <h1 className="text-4xl font-extrabold mb-4 text-lime-500 dark:text-white">
           Our Top Products
         </h1>
         <p className="text-gray-700 dark:text-gray-300 text-lg">
